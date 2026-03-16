@@ -4,4 +4,4 @@ from app.models.merchandise_model import MerchandisePIN
 
 def process_risk(data: Union[MerchandisePIN, List[MerchandisePIN]]):
 
-    return 
+    return data.company_name
