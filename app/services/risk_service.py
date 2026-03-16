@@ -1,21 +1,21 @@
 import random
-from app.models.merchandise_model import  MerchandisePIN, MerchandiseRiskResponse
+from app.models.merchandise_model import  RiskChannel, MerchandisePIN, MerchandiseRiskResponse
 from datetime import datetime
 
 
-def red_channel_rule(data: MerchandisePIN) :
+def red_channel_rule(data: MerchandisePIN) -> RiskChannel | None:
     if data.has_previous_infractions or data.merchandise_value > 500000:
-        return "VERMELHO"
+        return RiskChannel.VERMELHO
     
-def yellow_channel_rule(data: MerchandisePIN) :
+def yellow_channel_rule(data: MerchandisePIN) -> RiskChannel | None:
     if 100000 <= data.merchandise_value <= 500000:
-        return "AMARELO"
+        return RiskChannel.AMARELO
     
-def green_channel_rule(data: MerchandisePIN) :
-    return "VERDE"
+def green_channel_rule(data: MerchandisePIN) -> RiskChannel | None :
+    return RiskChannel.VERDE
 
 
-def generate_score(channel) -> int:
+def generate_score(channel: RiskChannel) -> int:
     ranges = {"VERMELHO": (80, 100), "AMARELO": (40, 79), "VERDE": (0, 39)}
 
     min_score, max_score = ranges[channel]
