@@ -1,0 +1,220 @@
+{
+  "info": {
+    "_postman_id": "0668f86b-cb6f-4f58-b4aa-38272b299b3f",
+    "name": "Borysta-api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "35056456"
+  },
+  "item": [
+    {
+      "name": "Single JSON",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"pin_id\": \"123456789\",\r\n    \"company_name\": \"Tech Indústria S.A.\",\r\n    \"merchandise_value\": 150000,\r\n    \"origin_state\": \"SP\",\r\n    \"destination_state\": \"AM\",\r\n    \"has_previous_infractions\": false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/v1/risk-score",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "risk-score"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List JSON",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n{\r\n    \"pin_id\": \"5463\",\r\n    \"company_name\": \"Santos Tech\",\r\n    \"merchandise_value\": 50000,\r\n    \"origin_state\": \"AM\",\r\n    \"destination_state\": \"CE\",\r\n    \"has_previous_infractions\": false\r\n},{\r\n    \"pin_id\": \"676799\",\r\n    \"company_name\": \"Lavor lab\",\r\n    \"merchandise_value\": 200000,\r\n    \"origin_state\": \"SC\",\r\n    \"destination_state\": \"SP\",\r\n    \"has_previous_infractions\": false\r\n},{\r\n    \"pin_id\": \"777999\",\r\n    \"company_name\": \"Gama S.A\",\r\n    \"merchandise_value\": 5000000,\r\n    \"origin_state\": \"SP\",\r\n    \"destination_state\": \"RJ\",\r\n    \"has_previous_infractions\": false\r\n}\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/v1/risk-score",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "risk-score"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Green channel",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"pin_id\": \"123456789\",\r\n    \"company_name\": \"Tech Indústria S.A.\",\r\n    \"merchandise_value\": 5000,\r\n    \"origin_state\": \"SP\",\r\n    \"destination_state\": \"AM\",\r\n    \"has_previous_infractions\": false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/v1/risk-score",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "risk-score"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Yellow channel",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"pin_id\": \"123456789\",\r\n    \"company_name\": \"Tech Indústria S.A.\",\r\n    \"merchandise_value\": 150000,\r\n    \"origin_state\": \"SP\",\r\n    \"destination_state\": \"AM\",\r\n    \"has_previous_infractions\": false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/v1/risk-score",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "risk-score"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Red channel high merchandise value",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"pin_id\": \"123456789\",\r\n    \"company_name\": \"Tech Indústria S.A.\",\r\n    \"merchandise_value\": 500001,\r\n    \"origin_state\": \"SP\",\r\n    \"destination_state\": \"AM\",\r\n    \"has_previous_infractions\": false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/v1/risk-score",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "risk-score"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Red channel has infractions true",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"pin_id\": \"123456789\",\r\n    \"company_name\": \"Tech Indústria S.A.\",\r\n    \"merchandise_value\": 5000,\r\n    \"origin_state\": \"SP\",\r\n    \"destination_state\": \"AM\",\r\n    \"has_previous_infractions\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/v1/risk-score",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "risk-score"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Missing field",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"pin_id\": \"123456789\",\r\n    \"company_name\": \"Tech Indústria S.A.\",\r\n    \"merchandise_value\": 5000,\r\n    \"origin_state\": \"SP\",\r\n    \"destination_state\": \"AM\"\r\n    \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/v1/risk-score",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "risk-score"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

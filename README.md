@@ -97,6 +97,21 @@ Realiza a análise de risco de uma ou mais mercadorias.
 
 ---
 
+# Postman
+
+Você pode testar a API utilizando a collection incluída neste repositório.
+
+### Passos
+
+1. Abra o Postman  
+2. Clique em **Importar**  
+3. Selecione o arquivo:
+
+postman/borysta-api.postman_collection.json
+
+---
+
+
 # Regras de Classificação de Risco
 
 A classificação segue três canais:
